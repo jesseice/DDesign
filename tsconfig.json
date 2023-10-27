@@ -20,6 +20,12 @@
       "@examples/": [
         "examples/src/"
       ],
+      "@src/": [
+        "src/"
+      ],
+      "@docs/": [
+        "/docs"
+      ]
     }
   },
   "include": [
