@@ -1,19 +1,21 @@
 <!-- 弹窗 -->
 <template>
   <Teleport to="body">
-    <div class="modal" v-if="visible">
-      <div class="modal-mask" @click="maskCloseFn"></div>
-      <div class="modal-content" v-bind="$attrs">
-        <div class="modal-header">
-          <div class="modal-title">
-            <slot name="title"></slot>
+    <div class="dd-modal" v-if="visible">
+      <div class="dd-modal-mask" v-if="mask" @click="maskCloseFn"></div>
+      <div class="dd-modal-content" v-bind="$attrs" :position="position">
+        <div class="dd-modal-header">
+          <div class="dd-modal-title">
+            <slot name="title">{{ title }}</slot>
           </div>
-          <div class="modal-closebtn" @click="cancel">
-            <slot name="closeBtn">X</slot>
+          <div class="dd-modal-closebtn" @click="cancel">
+            <slot name="closeBtn">{{ closeBtn }}</slot>
           </div>
         </div>
-        <div class="modal-body"></div>
-        <div class="modal-footer">
+        <div class="dd-modal-body">
+          <slot></slot>
+        </div>
+        <div class="dd-modal-footer">
           <slot name="footer">
             <div class="btn_wrap">
               <d-button @click="cancel">取消</d-button>
@@ -44,6 +46,7 @@ const cancel = () => {
 
 const confirm = () => {
   visible.value = false;
+  handleValue();
 };
 
 const maskCloseFn = () => props.maskClose && cancel();

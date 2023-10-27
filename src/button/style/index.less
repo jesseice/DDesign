@@ -1,18 +1,58 @@
-button {
-  padding: 5px 20px;
+.dd-button {
   margin: 0 3px;
-  border: 1px solid #f2f2f2;
+  border: none;
   border-radius: 6px;
-  background-color: #e2e2e2;
+  background-color: var(--dd-default-color);
+  box-sizing: border-box;
   cursor: pointer;
 }
-button:hover {
-  background-color: #f0efef;
+.dd-button:hover {
+  background-color: var(--dd-default-hover-color);
 }
-button[btType="primary"] {
-  background-color: rgb(23, 99, 212);
+
+.dd-button[btnType="primary"] {
+  background-color: var(--dd-primary-color);
   color: #fff;
 }
-button[btType="primary"]:hover {
-  background-color: rgb(50, 116, 216);
+.dd-button[btnType="primary"]:hover {
+  background-color: var(--dd-primary-hover-color);
+}
+
+.dd-button[btnType="success"] {
+  background-color: var(--dd-success-color);
+  color: #fff;
+}
+.dd-button[btnType="success"]:hover {
+  background-color: var(--dd-success-hover-color);
+}
+
+.dd-button[btnType="danger"] {
+  background-color: var(--dd-danger-color);
+  color: #fff;
+}
+.dd-button[btnType="danger"]:hover {
+  background-color: var(--dd-danger-hover-color);
+}
+
+.dd-button[btnType="warning"] {
+  background-color: var(--dd-warning-color);
+  color: #fff;
+}
+.dd-button[btnType="warning"]:hover {
+  background-color: var(--dd-warning-hover-color);
+}
+
+
+.dd-button[size="default"] {
+  padding: 7px 20px;
+  font-size: 14px;
+}
+
+.dd-button[size="small"] {
+  padding: 5px 20px;
+  font-size: 12px;
+}
+.dd-button[size="large"] {
+  padding: 10px 20px;
+  font-size: 16px;
 }

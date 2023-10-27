@@ -1,10 +1,10 @@
-.modal {
+.dd-modal {
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 9998;
 }
-.modal-mask {
+.dd-modal-mask {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -13,11 +13,11 @@
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.modal-content {
+.dd-modal-content {
   position: fixed;
   z-index: 2;
   transform: translate(-50%, -50%);
-  top: 50%;
+  top: 20%;
   left: 50%;
   width: 400px;
   border-radius: 8px;
@@ -26,7 +26,13 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.modal-header {
+.dd-modal-content[position="top"] {
+  top: 20%;
+}
+.dd-modal-content[position="center"] {
+  top: 50%;
+}
+.dd-modal-header {
   height: 40px;
   width: 100%;
   border-bottom: 1px solid #f2f2f2;
@@ -34,21 +40,21 @@
   justify-content: space-between;
   align-items: center;
 }
-.modal-closebtn {
-  padding: 10px;
+.dd-modal-closebtn {
+  padding: 15px;
   cursor: pointer;
 }
-.modal-title {
-  padding-left: 10px;
+.dd-modal-title {
+  padding-left: 20px;
 }
-.modal-body {
+.dd-modal-body {
   padding: 20px;
 }
-.modal-body::after {
+.dd-modal-body::after {
   content: "";
   height: 11px;
 }
-.modal-footer {
+.dd-modal-footer {
   width: 100%;
   box-sizing: border-box;
   border-top: 1px solid #f2f2f2;
