@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@examples/": [
+        "examples/src/"
+      ],
+    }
+  },
+  "include": [
+    "src/*.ts",
+    "src/*.vue",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "examples/src/*.ts",
+    "examples/src/*.vue",
+    "examples/src/**/*.ts",
+    "examples/src/**/*.d.ts",
+    "examples/src/**/*.tsx",
+    "examples/src/**/*.vue",
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}
