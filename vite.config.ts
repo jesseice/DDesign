@@ -3,9 +3,8 @@ import vuePlugin from "@vitejs/plugin-vue";
 
 export default defineConfig(() => {
   return {
-    root: "./examples",
+    // root: "./examples",
     plugins: [
-      // ...
       vuePlugin(),
     ],
   };

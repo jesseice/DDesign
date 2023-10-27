@@ -5,17 +5,20 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "vp": "vuepress dev docs",
+    "vp:build": "vuepress build docs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vite": "^4.5.0",
-    "vue": "^3.3.7"
+    "vite": "^4.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",
-    "less": "^4.2.0"
+    "@vuepress/client": "2.0.0-beta.67",
+    "less": "^4.2.0",
+    "vue": "^3.3.7",
+    "vuepress": "2.0.0-beta.67"
   }
 }
