@@ -1,15 +1,14 @@
-import modal from "./modal/index.vue";
-import button from "./button/index.vue";
+import "./style/index.less";
 import { type App } from "vue";
+import * as components from "./components";
+export * from "./components";
 
-const components: any = {
-  button,
-  modal,
-};
-
-const install = (app: App<HTMLElement>) => {
+const install = (app: App) => {
   Object.keys(components).forEach((key: string) => {
-    app.component(`d-${key}`, components[key]);
+    const k = key.toLocaleLowerCase();
+    // @ts-ignore
+    app.component(`d-${k}`, components[key]);
   });
 };
+
 export default { install };

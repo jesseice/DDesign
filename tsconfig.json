@@ -17,14 +17,11 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@examples/": [
-        "examples/src/"
+      "@/*": [
+        "examples/src/*"
       ],
-      "@src/": [
-        "src/"
-      ],
-      "@docs/": [
-        "/docs"
+      "@dist": [
+        "dist/"
       ]
     }
   },

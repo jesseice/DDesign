@@ -1,6 +1,8 @@
 import App from "./App.vue";
 
 import { createApp } from "vue";
-import ddesign from "../../src/index";
-import "../../src/style/index.less";
+// @ts-ignore
+import ddesign from "@dist/index";
+import "@dist/style.css";
+
 createApp(App).use(ddesign).mount("#app");

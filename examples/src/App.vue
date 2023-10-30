@@ -27,7 +27,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import Modal from "./pages/modal.vue";
+import Modal from "@/pages/modal.vue";
 </script>
 <style lang="less" scoped>
 .c-big_wrap {

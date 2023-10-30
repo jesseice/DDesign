@@ -8,7 +8,7 @@
 </template>
 <script setup lang="ts">
 import { reactive } from "vue";
-const state = reactive({
+const state: any = reactive({
   visible: false,
 });
 const open = () => (state.visible = true);

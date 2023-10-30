@@ -1,4 +1,4 @@
-export const _props = {
+export const _props: any = {
   value: {
     type: Boolean,
     default: false,
