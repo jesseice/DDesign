@@ -11,9 +11,9 @@ actions:
     type: secondary
 features:
   - title: 简洁至上
-    details: 超小体积 & 快速搭建
-  - title: 易扩展
-    details: 可根据需求随意修改组件,源码简单可塑性强
+    details: 只封装组件的最常用情况，易扩展
+  - title: 轻量级
+    details: 包大小仅20kB，相比主流UI框架小几千倍
   - title: vue3
     details: 基于vue3 无条件支持vue3
 footer: MIT Licensed | Copyright © 2023-present jesseice

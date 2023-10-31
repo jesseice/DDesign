@@ -1,31 +1,31 @@
 <!-- 弹窗 -->
 <template>
-  <!-- <Teleport to="body"> -->
-  <div class="dd-modal" v-if="visible">
-    <div class="dd-modal-mask" v-if="mask" @click="maskCloseFn"></div>
-    <div class="dd-modal-content" v-bind="$attrs" :position="position">
-      <div class="dd-modal-header">
-        <div class="dd-modal-title">
-          <slot name="title">{{ title }}</slot>
-        </div>
-        <div class="dd-modal-closebtn" @click="cancel">
-          <slot name="closeBtn">{{ closeBtn }}</slot>
-        </div>
-      </div>
-      <div class="dd-modal-body">
-        <slot></slot>
-      </div>
-      <div class="dd-modal-footer">
-        <slot name="footer">
-          <div class="btn_wrap">
-            <d-button @click="cancel">取消</d-button>
-            <d-button type="primary" @click="confirm">确认</d-button>
+  <Teleport to="body">
+    <div class="dd-modal" v-if="visible">
+      <div class="dd-modal-mask" v-if="mask" @click="maskCloseFn"></div>
+      <div class="dd-modal-content" v-bind="$attrs" :position="position">
+        <div class="dd-modal-header">
+          <div class="dd-modal-title">
+            <slot name="title">{{ title }}</slot>
           </div>
-        </slot>
+          <div class="dd-modal-closebtn" @click="cancel">
+            <slot name="closeBtn">{{ closeBtn }}</slot>
+          </div>
+        </div>
+        <div class="dd-modal-body">
+          <slot></slot>
+        </div>
+        <div class="dd-modal-footer">
+          <slot name="footer">
+            <div class="btn_wrap">
+              <d-button @click="cancel">取消</d-button>
+              <d-button type="primary" @click="confirm">确认</d-button>
+            </div>
+          </slot>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- </Teleport> -->
+  </Teleport>
 </template>
 <script setup lang="ts">
 import { ref, watch } from "vue";

@@ -32,10 +32,27 @@
         <d-button type="primary">3</d-button>
       </d-space>
     </div>
+    Message：
+    <div class="c-big_wrap">
+      <d-message type="success" content="成功" style="width: 160px" />
+      <div style="height: 10px"></div>
+      <d-button type="success" @click="openMessage('success')">
+        消息提示
+      </d-button>
+      <d-button type="danger" @click="openMessage('error')">消息提示</d-button>
+      <d-button type="primary" @click="openMessage('warning')">
+        消息提示
+      </d-button>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import Modal from "@/pages/modal.vue";
+import { MessagePlugin } from "../../src/index";
+
+const openMessage = (type: any) => {
+  MessagePlugin[type]("测试", 5000);
+};
 </script>
 <style lang="less" scoped>
 .c-big_wrap {

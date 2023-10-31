@@ -2,7 +2,7 @@ import { defineUserConfig, defaultTheme } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "DDesign",
+  title: "DDesign-vue-next",
   description: "开源简易UI框架-支持Vue3",
   head: [["link", { rel: "icon", href: "../images/logo.png" }]],
   base: "/DDesign/",
@@ -16,6 +16,7 @@ export default defineUserConfig({
       {
         text: "文档",
         link: "/components/quickStart",
+        activeMatch: "components",
       },
     ],
     sidebar: {
@@ -43,6 +44,10 @@ export default defineUserConfig({
             {
               text: "弹窗（modal）",
               link: "/components/modal",
+            },
+            {
+              text: "全局提示（message）",
+              link: "/components/message",
             },
           ],
         },

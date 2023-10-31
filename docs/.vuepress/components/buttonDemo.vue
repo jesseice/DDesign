@@ -29,6 +29,12 @@
       <d-button type="primary" size="large">large</d-button>
     </template>
   </Code>
+  <Code :code-str="code3" title="属性透传">
+    <template #subscribe> 原生按钮属性可直接使用 </template>
+    <template #demo>
+      <d-button type="primary" disabled>禁用</d-button>
+    </template>
+  </Code>
 </template>
 <script setup lang="ts">
 import Code from "./code.vue";
@@ -43,4 +49,5 @@ const code1 = `
 const code2 = `<d-button type="primary" size="small">small</d-button>
 <d-button type="primary">default</d-button>
 <d-button type="primary" size="large">large</d-button>`;
+const code3 = `<d-button type="primary" disabled>禁用</d-button>`;
 </script>
