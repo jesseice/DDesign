@@ -8,10 +8,10 @@ pnpm vpb
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
-
+tag=$(date "+%Y%m%d_%H%M%S")
 git init
 git add .
-git commit -m 'publicDocs'
+git commit -m p$tag
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:jesseice/DDesign.git master:gh-pages

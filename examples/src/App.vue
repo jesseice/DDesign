@@ -24,6 +24,14 @@
     <div class="c-big_wrap">
       <Modal />
     </div>
+    Space:
+    <div class="c-big_wrap">
+      <d-space direction="vertical">
+        <d-button type="primary">1</d-button>
+        <d-button type="primary">2</d-button>
+        <d-button type="primary">3</d-button>
+      </d-space>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

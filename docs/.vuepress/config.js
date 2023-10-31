@@ -5,6 +5,7 @@ export default defineUserConfig({
   title: "DDesign",
   description: "开源简易UI框架-支持Vue3",
   head: [["link", { rel: "icon", href: "../images/logo.png" }]],
+  base: "/DDesign/",
   theme: defaultTheme({
     // 默认主题配置
     navbar: [
@@ -22,6 +23,10 @@ export default defineUserConfig({
         {
           text: "开始",
           children: [{ text: "快速开始", link: "/components/quickStart" }],
+        },
+        {
+          text: "布局",
+          children: [{ text: "间距", link: "/components/space" }],
         },
         {
           text: "元级组件",
