@@ -1,0 +1,83 @@
+.dd-input {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #505050;
+  border-radius: 4px;
+  .dd-input-wrap {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 2px;
+    box-sizing: border-box;
+    .dd-input-inner {
+      flex: 1;
+      max-width: 100%;
+      min-width: 0;
+      height: 100%;
+      box-sizing: border-box;
+      border: none !important;
+      text-indent: 5px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .dd-tips {
+    position: absolute;
+    transform: translate(0, 100%);
+    bottom: -2px;
+    left: 0;
+    font-size: 14px;
+  }
+}
+.dd-input[size="small"] {
+  height: 24px;
+  .dd-input-inner {
+    font-size: 14px;
+  }
+}
+.dd-input[size="medium"] {
+  height: 32px;
+  .dd-input-inner {
+    font-size: 16px;
+  }
+}
+.dd-input[size="large"] {
+  height: 40px;
+  .dd-input-inner {
+    font-size: 17px;
+  }
+}
+
+.dd-input[status="success"] {
+  border: 2px solid var(--dd-success-base);
+  .dd-tips {
+    color: var(--dd-success-base);
+  }
+}
+.dd-input[status="error"] {
+  border: 2px solid var(--dd-danger-base);
+  .dd-tips {
+    color: var(--dd-danger-base);
+  }
+}
+.dd-input[status="warning"] {
+  border: 2px solid var(--dd-warning-base);
+  .dd-tips {
+    color: var(--dd-warning-base);
+  }
+}
+.dd-input[disabled="true"] {
+  color: #f2f2f2;
+  cursor: not-allowed;
+  border-color: #f2f2f2;
+  .dd-input-wrap {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+    .dd-input-inner {
+      cursor: not-allowed;
+    }
+  }
+}

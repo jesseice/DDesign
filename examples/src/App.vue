@@ -26,7 +26,7 @@
     </div>
     Space:
     <div class="c-big_wrap">
-      <d-space direction="vertical">
+      <d-space>
         <d-button type="primary">1</d-button>
         <d-button type="primary">2</d-button>
         <d-button type="primary">3</d-button>
@@ -44,12 +44,54 @@
         消息提示
       </d-button>
     </div>
+    Input：
+    <div class="c-big_wrap">
+      <d-space direction="vertical">
+        <d-input
+          v-model:value="state.input"
+          size="large"
+          placeholder="请输入"
+          style="width: 220px"
+          status="warning"
+          tips="123"
+        />
+        <d-input
+          v-model:value="state.input"
+          size="medium"
+          placeholder="请输入"
+          style="width: 220px"
+          status="success"
+          tips="123"
+        >
+          <template #prefix>+26</template>
+          <template #suffix>+26</template>
+        </d-input>
+        <d-input
+          v-model:value="state.input"
+          size="small"
+          placeholder="请输入"
+          style="width: 220px"
+          status="error"
+          tips="123"
+          disabled
+        />
+        <d-button
+          @click="() => MessagePlugin.success(state.input)"
+          style="width: 200px"
+        >
+          获取输入值
+        </d-button>
+      </d-space>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import Modal from "@/pages/modal.vue";
 import { MessagePlugin } from "../../src/index";
-
+import { reactive } from "vue";
+const state = reactive({
+  input: "",
+});
 const openMessage = (type: any) => {
   MessagePlugin[type]("测试", 5000);
 };

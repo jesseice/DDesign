@@ -2,6 +2,7 @@ import modal from "./modal/index.vue";
 import button from "./button/index.vue";
 import space from "./space/index.vue";
 import message from "./message/index.vue";
+import input from "./input/index.vue";
 
 import { type App } from "vue";
 const components: any = {
@@ -9,6 +10,7 @@ const components: any = {
   modal,
   space,
   message,
+  input,
 };
 
 Object.keys(components).forEach((key: string) => {
@@ -21,3 +23,4 @@ export const Button = button;
 export const Modal = modal;
 export const Space = space;
 export const Message = message;
+export const Input = input;

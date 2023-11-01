@@ -18,6 +18,11 @@ export default defineUserConfig({
         link: "/components/quickStart",
         activeMatch: "components",
       },
+      {
+        text: "Github",
+        link: "https://github.com/jesseice/DDesign",
+        target: "_blank",
+      },
     ],
     sidebar: {
       "/components": [
