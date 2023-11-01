@@ -29,6 +29,7 @@
 
 <script lang="ts" setup>
 import { onMounted, reactive, ref } from "vue";
+import { MessagePlugin } from "../../../src";
 const props = defineProps({
   codeStr: {
     type: String,
@@ -72,6 +73,7 @@ const copy = () => {
   document.execCommand("Copy");
   oInput.style.display = "none";
   document.body.removeChild(oInput);
+  MessagePlugin.success("已复制");
 };
 </script>
 

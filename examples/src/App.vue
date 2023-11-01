@@ -54,16 +54,16 @@
           style="width: 220px"
           status="warning"
           tips="123"
-        />
+          ><template #prefix>账户</template>
+        </d-input>
         <d-input
           v-model:value="state.input"
-          size="medium"
           placeholder="请输入"
           style="width: 220px"
           status="success"
           tips="123"
         >
-          <template #prefix>+26</template>
+          <template #prefix>账户：</template>
           <template #suffix>+26</template>
         </d-input>
         <d-input

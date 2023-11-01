@@ -7,6 +7,14 @@ export const _props = {
     type: String,
     default: "",
   },
+  prefix: {
+    type: String,
+    default: "",
+  },
+  suffix: {
+    type: String,
+    default: "",
+  },
   status: {
     type: String,
     default: "",

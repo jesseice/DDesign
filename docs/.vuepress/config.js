@@ -41,6 +41,10 @@ export default defineUserConfig({
               text: "按钮（button）",
               link: "/components/button",
             },
+            {
+              text: "输入框（input）",
+              link: "/components/input",
+            },
           ],
         },
         {

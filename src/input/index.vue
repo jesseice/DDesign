@@ -1,8 +1,14 @@
 <template>
-  <div class="dd-input" :size="size" :status="status" :disabled="disabled">
+  <div
+    class="dd-input"
+    ref="inputWrap"
+    :size="size"
+    :status="status"
+    :disabled="disabled"
+  >
     <div class="dd-input-wrap">
       <div class="dd-input-prefix">
-        <slot name="prefix"></slot>
+        <slot name="prefix">{{ prefix }}</slot>
       </div>
       <input
         class="dd-input-inner"
@@ -12,9 +18,11 @@
         :disabled="disabled"
         @change="change"
         @input="input"
+        @focus="focus"
+        @blur="blur"
       />
       <div class="dd-input-suffix">
-        <slot name="suffix"></slot>
+        <slot name="suffix">{{ suffix }}</slot>
       </div>
     </div>
     <div class="dd-tips">{{ tips }}</div>
@@ -22,10 +30,11 @@
 </template>
 <script setup lang="ts">
 import { _props } from "./_config";
-import { reactive, watch } from "vue";
+import { reactive, ref, watch } from "vue";
 
 const emits = defineEmits(["update:value", "change", "input", "focus", "blur"]);
 const props = defineProps(_props);
+const inputWrap: any = ref(null);
 watch(
   () => props.value,
   () => {
@@ -39,6 +48,14 @@ const state = reactive({
 
 const change = (e: any) => {
   emits("change", e.target.value);
+};
+const focus = (e: any) => {
+  inputWrap.value.classList.add("dd-inputfocus");
+  emits("focus", e.target.value);
+};
+const blur = (e: any) => {
+  inputWrap.value.classList.remove("dd-inputfocus");
+  emits("blur", e.target.value);
 };
 const input = (e: any) => {
   state.value = e.target.value;

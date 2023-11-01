@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  border: 1px solid #505050;
+  border: 1px solid #DCDCDC;
   border-radius: 4px;
   .dd-input-wrap {
     height: 100%;
@@ -22,6 +22,14 @@
       &:focus {
         outline: none;
       }
+      &::placeholder {
+        color: #b6b6b6;
+      }
+    }
+    .dd-input-suffix, .dd-input-prefix {
+      padding: 0 4px;
+      line-height: 100%;
+      color: #b6b6b6;
     }
   }
   .dd-tips {
@@ -31,6 +39,10 @@
     left: 0;
     font-size: 14px;
   }
+}
+.dd-inputfocus {
+ border: 1px solid var(--d-brand-focus); 
+ box-shadow: var(--dd-box-shadow-base);
 }
 .dd-input[size="small"] {
   height: 24px;
