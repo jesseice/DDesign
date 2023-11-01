@@ -1,34 +1,23 @@
-.dd-input {
+.dd-select {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   border: 1px solid #DCDCDC;
   border-radius: 4px;
-  .dd-input-wrap {
+  .dd-select-wrap {
     height: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
     padding: 2px;
     box-sizing: border-box;
-    .dd-input-inner {
+    .dd-select-inner {
       flex: 1;
       max-width: 100%;
       min-width: 0;
       height: 100%;
       box-sizing: border-box;
       border: none !important;
-      &:focus {
-        outline: none;
-      }
-      &::placeholder {
-        color: #b6b6b6;
-      }
-    }
-    .dd-input-suffix, .dd-input-prefix {
-      padding: 0 4px;
-      line-height: 100%;
-      color: #b6b6b6;
     }
   }
   .dd-tips {
@@ -39,55 +28,51 @@
     font-size: 14px;
   }
 }
-.dd-inputfocus {
- border: 1px solid var(--d-brand-focus); 
- box-shadow: var(--dd-box-shadow-base);
-}
-.dd-input[size="small"] {
+.dd-select[size="small"] {
   height: 24px;
-  .dd-input-inner {
+  .dd-select-inner {
     font-size: 14px;
   }
 }
-.dd-input[size="medium"] {
+.dd-select[size="medium"] {
   height: 32px;
-  .dd-input-inner {
+  .dd-select-inner {
     font-size: 16px;
   }
 }
-.dd-input[size="large"] {
+.dd-select[size="large"] {
   height: 40px;
-  .dd-input-inner {
+  .dd-select-inner {
     font-size: 17px;
   }
 }
 
-.dd-input[status="success"] {
+.dd-select[status="success"] {
   border: 2px solid var(--dd-success-base);
   .dd-tips {
     color: var(--dd-success-base);
   }
 }
-.dd-input[status="error"] {
+.dd-select[status="error"] {
   border: 2px solid var(--dd-danger-base);
   .dd-tips {
     color: var(--dd-danger-base);
   }
 }
-.dd-input[status="warning"] {
+.dd-select[status="warning"] {
   border: 2px solid var(--dd-warning-base);
   .dd-tips {
     color: var(--dd-warning-base);
   }
 }
-.dd-input[disabled="true"] {
+.dd-select[disabled="true"] {
   color: #f2f2f2;
   cursor: not-allowed;
   border-color: #f2f2f2;
-  .dd-input-wrap {
+  .dd-select-wrap {
     background-color: #f2f2f2;
     cursor: not-allowed;
-    .dd-input-inner {
+    .dd-select-inner {
       cursor: not-allowed;
     }
   }

@@ -13,7 +13,7 @@
       <input
         class="dd-input-inner"
         :value="state.value"
-        type="text"
+        :type="type"
         :placeholder="placeholder"
         :disabled="disabled"
         @change="change"

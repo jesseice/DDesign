@@ -28,7 +28,6 @@ const props = defineProps({
 const renderStyle = computed(() => {
   const sizeMap = { small: "8px", medium: "16px", large: "24px" };
   const { size } = props;
-  console.log("[size] ---> ", size);
   let renderGap = "";
   if (typeof size === "string") {
     renderGap = sizeMap[size];

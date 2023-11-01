@@ -60,6 +60,18 @@
       </d-space>
     </template>
   </Code>
+  <Code :code-str="code5" title="数字输入框">
+    <template #subscribe> type：<code>number</code> </template>
+    <template #demo>
+      <d-input-number />
+    </template>
+  </Code>
+  <Code :code-str="code6" title="密码输入框">
+    <template #subscribe> type：<code>password</code> </template>
+    <template #demo>
+      <d-input-password />
+    </template>
+  </Code>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
@@ -93,5 +105,7 @@ const code4 = `
     <template #suffix>个币</template>
   </d-input>
 </d-space>`;
+const code5 = `<d-input-number />`;
+const code6 = `<d-input-password />`;
 const value = ref("");
 </script>

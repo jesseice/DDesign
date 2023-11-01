@@ -3,6 +3,12 @@ export const _props = {
     type: String,
     default: "",
   },
+  type: {
+    type: String,
+    default: "text",
+    validator: (val: string) =>
+      ["text", "password", "number", "email", "select"].includes(val),
+  },
   tips: {
     type: String,
     default: "",

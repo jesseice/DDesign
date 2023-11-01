@@ -1,6 +1,6 @@
 <template>
   <div>
-    Button:
+    <!-- Button:
     <div class="c-big_wrap">
       <div class="c_wrap">
         --type：
@@ -26,7 +26,7 @@
     </div>
     Space:
     <div class="c-big_wrap">
-      <d-space>
+      <d-space align="center">
         <d-button type="primary">1</d-button>
         <d-button type="primary">2</d-button>
         <d-button type="primary">3</d-button>
@@ -83,15 +83,30 @@
         </d-button>
       </d-space>
     </div>
+    InputNumber：
+    <div class="c-big-wrap">
+      <d-input-number v-model:value="state.input"></d-input-number>
+      <d-input-password v-model:value="state.input"></d-input-password>
+    </div> -->
+    Select：
+    <d-select v-model:value="state.selectValue" :options="options"></d-select>
+    <d-button type="primary" @click="MessagePlugin.success(state.selectValue)">
+      111
+    </d-button>
   </div>
 </template>
 <script setup lang="ts">
-import Modal from "@/pages/modal.vue";
+// import Modal from "@/pages/modal.vue";
 import { MessagePlugin } from "../../src/index";
 import { reactive } from "vue";
 const state = reactive({
   input: "",
+  selectValue: undefined,
 });
+const options = new Array(10).fill(1).map((val, index) => ({
+  label: `${new Date().getTime()}${index}`,
+  value: index,
+}));
 const openMessage = (type: any) => {
   MessagePlugin[type]("测试", 5000);
 };
