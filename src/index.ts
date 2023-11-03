@@ -1,4 +1,5 @@
 import "./style/index.less";
+import "./icons/iconfont.css";
 import { type App } from "vue";
 import * as components from "./components";
 import { replaceUpperCaseWithDashAndLowercase } from "./utils";

@@ -1,6 +1,10 @@
 export const _props = {
   value: {
-    type: [String, Number],
+    type: [String, Number, Array],
+    default: "",
+  },
+  modelValue: {
+    type: [String, Number, Array],
     default: "",
   },
   options: {
@@ -27,5 +31,23 @@ export const _props = {
   disabled: {
     type: Boolean,
     default: false,
+  },
+  /**
+   * 选项是否与select框同宽
+   */
+  optionMatchSelectWidth: {
+    type: Boolean,
+    default: true,
+  },
+  filterable: {
+    type: Boolean,
+    default: false,
+  },
+  filter: {
+    type: () => Boolean,
+    default: undefined,
+  },
+  multiple: {
+    type: Boolean,
   },
 };

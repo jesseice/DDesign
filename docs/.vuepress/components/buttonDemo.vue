@@ -35,6 +35,12 @@
       <d-button type="primary" disabled>禁用</d-button>
     </template>
   </Code>
+  <Code :code-str="code4" title="加载状态">
+    <template #subscribe> <code>loading</code> </template>
+    <template #demo>
+      <d-button type="primary" :loading="true">获取中</d-button>
+    </template>
+  </Code>
 </template>
 <script setup lang="ts">
 import Code from "./code.vue";
@@ -50,4 +56,5 @@ const code2 = `<d-button type="primary" size="small">small</d-button>
 <d-button type="primary">default</d-button>
 <d-button type="primary" size="large">large</d-button>`;
 const code3 = `<d-button type="primary" disabled>禁用</d-button>`;
+const code4 = `<d-button type="primary" :loading="true">获取中</d-button>`;
 </script>

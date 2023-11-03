@@ -9,26 +9,25 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 2px;
+    flex-wrap: wrap;
+    // padding: 2px;
     box-sizing: border-box;
     .dd-input-inner {
       flex: 1;
       max-width: 100%;
-      min-width: 0;
-      height: 100%;
       box-sizing: border-box;
       border: none !important;
       &:focus {
         outline: none;
       }
       &::placeholder {
-        color: #b6b6b6;
+        color: var(--dd-ignore-color);
       }
     }
     .dd-input-suffix, .dd-input-prefix {
+      height: 100%;
       padding: 0 4px;
-      line-height: 100%;
-      color: #b6b6b6;
+      color: var(--dd-ignore-color);
     }
   }
   .dd-tips {
@@ -44,20 +43,23 @@
  box-shadow: var(--dd-box-shadow-base);
 }
 .dd-input[size="small"] {
-  height: 24px;
+  min-height: var(--dd-height-small);
   .dd-input-inner {
+    min-height: var(--dd-height-small);
     font-size: 14px;
   }
 }
 .dd-input[size="medium"] {
-  height: 32px;
+  min-height: var(--dd-height-medium);
   .dd-input-inner {
+    height: var(--dd-height-medium);
     font-size: 16px;
   }
 }
 .dd-input[size="large"] {
-  height: 40px;
+  min-height: var(--dd-height-large);
   .dd-input-inner {
+    min-height: var(--dd-height-large);
     font-size: 17px;
   }
 }

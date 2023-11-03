@@ -3,6 +3,10 @@ export const _props: any = {
     type: Boolean,
     default: false,
   },
+  modelValue: {
+    type: Boolean,
+    default: false,
+  },
   title: {
     type: String,
     default: "",

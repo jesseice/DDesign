@@ -16,10 +16,12 @@
         :type="type"
         :placeholder="placeholder"
         :disabled="disabled"
+        :readonly="readonly"
         @change="change"
         @input="input"
         @focus="focus"
         @blur="blur"
+        @keydown="keydown"
       />
       <div class="dd-input-suffix">
         <slot name="suffix">{{ suffix }}</slot>
@@ -32,7 +34,15 @@
 import { _props } from "./_config";
 import { reactive, ref, watch } from "vue";
 
-const emits = defineEmits(["update:value", "change", "input", "focus", "blur"]);
+const emits = defineEmits([
+  "update:value",
+  "update:modelValue",
+  "change",
+  "input",
+  "focus",
+  "blur",
+  "keydown",
+]);
 const props = defineProps(_props);
 const inputWrap: any = ref(null);
 watch(
@@ -42,8 +52,15 @@ watch(
     handleValue();
   }
 );
+watch(
+  () => props.modelValue,
+  () => {
+    state.value = props.modelValue || "";
+    handleValue();
+  }
+);
 const state = reactive({
-  value: props.value || "",
+  value: props.value || props.modelValue || "",
 });
 
 const change = (e: any) => {
@@ -64,6 +81,11 @@ const input = (e: any) => {
 };
 const handleValue = () => {
   emits("update:value", state.value);
+  emits("update:modelValue", state.value);
+};
+
+const keydown = (e: KeyboardEvent) => {
+  emits("keydown", e.key);
 };
 </script>
 <style lang="less" scoped src="./style/index.less"></style>

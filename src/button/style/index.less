@@ -44,22 +44,30 @@
 
 
 .dd-button[size="default"] {
-  padding: 7px 20px;
+  height: 32px;
+  padding: 0 14px;
   font-size: 14px;
 }
 
 .dd-button[size="small"] {
-  padding: 5px 20px;
+  height: 24px;
+  padding: 0 12px;
   font-size: 12px;
 }
 .dd-button[size="large"] {
-  padding: 10px 20px;
+  height: 40px;
+  padding: 0 20px;
   font-size: 16px;
 }
 
 .dd-button[disabled] {
   background-color: #e5e5e5;
 }
+.dd-button[loading="true"] {
+  filter: grayscale(60%);
+  cursor: not-allowed;
+}
+
 .dd-button[disabled]:hover {
   background-color: #e5e5e5;
   cursor: not-allowed;

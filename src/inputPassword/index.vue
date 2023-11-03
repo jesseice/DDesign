@@ -1,10 +1,14 @@
 <template>
   <Input v-bind="$attrs" :type="inputType">
     <template #suffix>
-      <span style="cursor: pointer" @click="changeType">
-        <!-- TODO icon替换 -->
-        {{ inputType === "password" ? "L" : "O" }}
-      </span>
+      <span
+        style="cursor: pointer"
+        @click="changeType"
+        class="icon iconfont"
+        :class="
+          inputType === 'password' ? 'icon-yanjing-guan' : 'icon-yanjing-kai'
+        "
+      ></span>
     </template>
   </Input>
 </template>

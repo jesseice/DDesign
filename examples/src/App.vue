@@ -5,9 +5,21 @@
       <div class="c_wrap">
         --type：
         <d-button type="default">default</d-button>
-        <d-button type="primary">primary</d-button>
-        <d-button type="success">success</d-button>
-        <d-button type="warning">warning</d-button>
+        <d-button
+          type="primary"
+          :loading="state.loading"
+          @click="updateLoading"
+        >
+          primary
+        </d-button>
+        <d-button
+          type="success"
+          size="large"
+          :loading="true"
+          @click="updateLoading"
+          >success</d-button
+        >
+        <d-button type="warning" size="large">warning</d-button>
         <d-button type="danger">danger</d-button>
       </div>
       <div class="c_wrap">
@@ -48,7 +60,7 @@
     <div class="c-big_wrap">
       <d-space direction="vertical">
         <d-input
-          v-model:value="state.input"
+          v-model="state.input"
           size="large"
           placeholder="请输入"
           style="width: 220px"
@@ -57,7 +69,7 @@
           ><template #prefix>账户</template>
         </d-input>
         <d-input
-          v-model:value="state.input"
+          v-model="state.input"
           placeholder="请输入"
           style="width: 220px"
           status="success"
@@ -67,7 +79,7 @@
           <template #suffix>+26</template>
         </d-input>
         <d-input
-          v-model:value="state.input"
+          v-model="state.input"
           size="small"
           placeholder="请输入"
           style="width: 220px"
@@ -82,17 +94,27 @@
           获取输入值
         </d-button>
       </d-space>
-    </div>
+    </div> -->
     InputNumber：
     <div class="c-big-wrap">
-      <d-input-number v-model:value="state.input"></d-input-number>
-      <d-input-password v-model:value="state.input"></d-input-password>
-    </div> -->
+      <d-input-number v-model="state.input"></d-input-number>
+      <d-input-password v-model="state.input"></d-input-password>
+    </div>
     Select：
-    <d-select v-model:value="state.selectValue" :options="options"></d-select>
-    <d-button type="primary" @click="MessagePlugin.success(state.selectValue)">
-      111
-    </d-button>
+    <d-select
+      v-model="state.selectValue"
+      filterable
+      size="large"
+      :options="options"
+      @select="select"
+    >
+    </d-select>
+    Tag：
+    <d-tag variant="light" size="large">灰标签</d-tag>
+    <d-tag theme="primary" size="medium">标签一</d-tag>
+    <d-tag theme="success" variant="light">标签二</d-tag>
+    <d-tag theme="warning" variant="light">标签三</d-tag>
+    <d-tag theme="danger" variant="light">标签四</d-tag>
   </div>
 </template>
 <script setup lang="ts">
@@ -102,8 +124,17 @@ import { reactive } from "vue";
 const state = reactive({
   input: "",
   selectValue: undefined,
+  loading: false,
 });
-const options = new Array(10).fill(1).map((val, index) => ({
+const updateLoading = async () => {
+  state.loading = !state.loading;
+  await new Promise((resolve) => setTimeout(() => resolve(1), 3000));
+  state.loading = !state.loading;
+};
+const select = () => {
+  console.log("[state.selectValue] ---> ", state.selectValue);
+};
+const options = new Array(11).fill(1).map((val, index) => ({
   label: `${new Date().getTime()}${index}`,
   value: index,
 }));
@@ -117,5 +148,7 @@ const openMessage = (type: any) => {
 }
 .c_wrap {
   margin: 5px 0;
+  display: flex;
+  align-items: center;
 }
 </style>

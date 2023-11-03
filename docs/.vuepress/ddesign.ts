@@ -4,6 +4,8 @@ import modalDemo from "./components/modalDemo.vue";
 import spaceDemo from "./components/spaceDemo.vue";
 import messageDemo from "./components/messageDemo.vue";
 import inputDemo from "./components/inputDemo.vue";
+import selectDemo from "./components/selectDemo.vue";
+import tagDemo from "./components/tagDemo.vue";
 
 // 组件库组件
 import ddesign from "../../src/index";
@@ -15,6 +17,8 @@ const components: any = {
   spaceDemo,
   messageDemo,
   inputDemo,
+  selectDemo,
+  tagDemo,
 };
 const install = ddesign.install;
 ddesign.install = (app: App) => {

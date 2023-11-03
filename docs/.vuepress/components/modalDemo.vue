@@ -1,12 +1,8 @@
 <template>
-  <Code
-    :code-str="code1"
-    title="直接使用"
-    subscribe="v-model:value直接控制弹窗"
-  >
+  <Code :code-str="code1" title="直接使用" subscribe="v-model">
     <template #demo>
       <d-button @click="open" type="primary">打开弹窗</d-button>
-      <d-modal v-model:value="visible" style="width: 600px" title="弹窗">
+      <d-modal v-model="visible" style="width: 600px" title="弹窗">
         内容
       </d-modal>
     </template>

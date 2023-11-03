@@ -1,0 +1,44 @@
+{
+  "id": "4314724",
+  "name": "ddesign",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5387862",
+      "name": "关闭_o",
+      "font_class": "guanbi_o",
+      "unicode": "eb76",
+      "unicode_decimal": 60278
+    },
+    {
+      "icon_id": "18406527",
+      "name": "眼睛-开",
+      "font_class": "yanjing-kai",
+      "unicode": "e6f9",
+      "unicode_decimal": 59129
+    },
+    {
+      "icon_id": "18406535",
+      "name": "眼睛-关",
+      "font_class": "yanjing-guan",
+      "unicode": "e6fb",
+      "unicode_decimal": 59131
+    },
+    {
+      "icon_id": "15001638",
+      "name": "上拉",
+      "font_class": "shangla",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "19459651",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    }
+  ]
+}

@@ -6,6 +6,9 @@ import input from "./input/index.vue";
 import inputNumber from "./inputNumber/index.vue";
 import inputPassword from "./inputPassword/index.vue";
 import select from "./select/index.vue";
+import option from "./select/option.vue";
+import empty from "./empty/index.vue";
+import tag from "./tag/index.vue";
 
 import { type App } from "vue";
 import { replaceUpperCaseWithDashAndLowercase } from "./utils";
@@ -19,6 +22,9 @@ const components: any = {
   inputNumber,
   inputPassword,
   select,
+  empty,
+  tag,
+  option,
 };
 
 Object.keys(components).forEach((key: string) => {
@@ -36,3 +42,6 @@ export const Input = input;
 export const InputNumber = inputNumber;
 export const InputPassword = inputPassword;
 export const Select = select;
+export const Empty = empty;
+export const Tag = tag;
+export const Option = option;

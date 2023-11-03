@@ -30,13 +30,18 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import { _props } from "./_config";
-const emits = defineEmits(["update:value"]);
+const emits = defineEmits(["update:value", "update:modelValue"]);
 const props = defineProps(_props);
 
-const visible = ref(props.value || false);
+const visible = ref(props.value || props.modelValue || false);
+
 watch(
   () => props.value,
   () => (visible.value = props.value)
+);
+watch(
+  () => props.modelValue,
+  () => (visible.value = props.modelValue)
 );
 
 const cancel = () => {
@@ -51,6 +56,9 @@ const confirm = () => {
 
 const maskCloseFn = () => props.maskClose && cancel();
 
-const handleValue = () => emits("update:value", visible.value);
+const handleValue = () => {
+  emits("update:value", visible.value);
+  emits("update:modelValue", visible.value);
+};
 </script>
 <style lang="less" scoped src="./style/index.less"></style>

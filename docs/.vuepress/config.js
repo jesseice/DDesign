@@ -45,6 +45,19 @@ export default defineUserConfig({
               text: "输入框（input）",
               link: "/components/input",
             },
+            {
+              text: "选择框（select）",
+              link: "/components/select",
+            },
+          ],
+        },
+        {
+          text: "数据展示",
+          children: [
+            {
+              text: "标签（tag）",
+              link: "/components/tag",
+            },
           ],
         },
         {

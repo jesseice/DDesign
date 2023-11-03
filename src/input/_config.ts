@@ -3,6 +3,10 @@ export const _props = {
     type: String,
     default: "",
   },
+  modelValue: {
+    type: String,
+    default: "",
+  },
   type: {
     type: String,
     default: "text",
@@ -36,6 +40,10 @@ export const _props = {
     default: "请输入",
   },
   disabled: {
+    type: Boolean,
+    default: false,
+  },
+  readonly: {
     type: Boolean,
     default: false,
   },
