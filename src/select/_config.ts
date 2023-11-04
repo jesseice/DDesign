@@ -44,8 +44,7 @@ export const _props = {
     default: false,
   },
   filter: {
-    type: () => Boolean,
-    default: undefined,
+    type: Function,
   },
   multiple: {
     type: Boolean,

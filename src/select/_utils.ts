@@ -22,7 +22,7 @@ type optionsType = {
   label: string;
   value: string | number;
 };
-export const useFilter = (callback?: () => boolean) =>
+export const useFilter = (callback?: Function) =>
   callback
     ? callback
     : (search: string, option: optionsType) =>

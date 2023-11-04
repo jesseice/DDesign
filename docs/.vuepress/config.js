@@ -42,6 +42,15 @@ export default defineUserConfig({
               link: "/components/button",
             },
             {
+              text: "图标（icon）",
+              link: "/components/icon",
+            },
+          ],
+        },
+        {
+          text: "输入组件",
+          children: [
+            {
               text: "输入框（input）",
               link: "/components/input",
             },

@@ -33,11 +33,11 @@
     </template>
     <template #demo>
       <d-space style="margin-bottom: 20px">
-        <d-space direction="vertical" style="width: 200px" :size="30">
+        <d-space direction="vertical" :size="30">
           <d-input />
           <d-input status="success" tips="成功" />
         </d-space>
-        <d-space direction="vertical" style="width: 200px" :size="30">
+        <d-space direction="vertical" :size="30">
           <d-input status="warning" tips="警告" />
           <d-input status="error" tips="错误" />
         </d-space>
@@ -54,7 +54,7 @@
       <d-space align="center">
         <d-input prefix="充值" suffix="个币" placeholder="prop方式" />
         <d-input placeholder="插槽方式">
-          <template #prefix>充值</template>
+          <template #prefix>插槽</template>
           <template #suffix>个币</template>
         </d-input>
       </d-space>

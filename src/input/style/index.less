@@ -5,16 +5,15 @@
   border: 1px solid #DCDCDC;
   border-radius: 4px;
   .dd-input-wrap {
-    height: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    // padding: 2px;
     box-sizing: border-box;
     .dd-input-inner {
       flex: 1;
       max-width: 100%;
+      min-width: 0;
       box-sizing: border-box;
       border: none !important;
       &:focus {
@@ -25,9 +24,9 @@
       }
     }
     .dd-input-suffix, .dd-input-prefix {
-      height: 100%;
       padding: 0 4px;
       color: var(--dd-ignore-color);
+      line-height: 100%;
     }
   }
   .dd-tips {
@@ -46,6 +45,8 @@
   min-height: var(--dd-height-small);
   .dd-input-inner {
     min-height: var(--dd-height-small);
+  }
+  .dd-input-suffix, .dd-input-prefix, .dd-input-inner {
     font-size: 14px;
   }
 }
@@ -53,6 +54,8 @@
   min-height: var(--dd-height-medium);
   .dd-input-inner {
     height: var(--dd-height-medium);
+  }
+  .dd-input-suffix, .dd-input-prefix, .dd-input-inner {
     font-size: 16px;
   }
 }
@@ -60,6 +63,8 @@
   min-height: var(--dd-height-large);
   .dd-input-inner {
     min-height: var(--dd-height-large);
+  }
+  .dd-input-suffix, .dd-input-prefix, .dd-input-inner {
     font-size: 17px;
   }
 }

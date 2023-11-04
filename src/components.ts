@@ -9,6 +9,7 @@ import select from "./select/index.vue";
 import option from "./select/option.vue";
 import empty from "./empty/index.vue";
 import tag from "./tag/index.vue";
+import icon from "./icons/index.vue";
 
 import { type App } from "vue";
 import { replaceUpperCaseWithDashAndLowercase } from "./utils";
@@ -25,6 +26,7 @@ const components: any = {
   empty,
   tag,
   option,
+  icon,
 };
 
 Object.keys(components).forEach((key: string) => {
@@ -45,3 +47,4 @@ export const Select = select;
 export const Empty = empty;
 export const Tag = tag;
 export const Option = option;
+export const Icon = icon;

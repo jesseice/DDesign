@@ -106,6 +106,7 @@
       filterable
       size="large"
       :options="options"
+      :filter="filterFn"
       @select="select"
     >
     </d-select>
@@ -126,6 +127,12 @@ const state = reactive({
   selectValue: undefined,
   loading: false,
 });
+const filterFn = (
+  search: string,
+  option: { label: string; value: string | number }
+) => {
+  if (search === "123") return true;
+};
 const updateLoading = async () => {
   state.loading = !state.loading;
   await new Promise((resolve) => setTimeout(() => resolve(1), 3000));

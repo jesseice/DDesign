@@ -4,7 +4,7 @@
 
 ## 基本用法
 
-<d-Demo></d-Demo>
+<d-iconDemo></d-iconDemo>
 
 ## API
 

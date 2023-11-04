@@ -3,10 +3,10 @@
     <Input
       :value="label"
       v-model="inputValue"
-      style="width: 100%"
       :disabled="disabled"
-      :readonly="!filterable"
+      :readonly="!(filterable || filter)"
       :size="size"
+      :placeholder="placeholder"
       @click="click"
       @blur="blur"
       @keydown="keydown"
@@ -104,7 +104,7 @@ const filterFn = useFilter(props.filter);
 
 // 计算筛选后的选项
 const endOptions = computed(() => {
-  if (!inputValue.value || !props.multiple) {
+  if (!inputValue.value || !(props.filterable || props.filter)) {
     return props.options;
   }
   return props.options.filter((option: any) =>
