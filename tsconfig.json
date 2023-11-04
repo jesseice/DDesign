@@ -38,6 +38,8 @@
     "examples/src/**/*.d.ts",
     "examples/src/**/*.tsx",
     "examples/src/**/*.vue",
+    "dev.config.ts",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",

@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 import vuePlugin from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
-export default defineConfig(({ mode }) => {
-  console.log("[mode] ---> ", mode);
+export default defineConfig(({}) => {
   // 打包库入口
   const entry = "./src/index.ts";
   const output = "./dist";

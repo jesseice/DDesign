@@ -6,6 +6,7 @@
       :type="item.type"
       :content="item.content"
       :duration="item.duration || 1500"
+      :animation="true"
       style="margin: 10px 0"
       @close="close(item.id)"
     />
@@ -39,5 +40,8 @@ defineExpose({
   left: 50%;
   top: 20px;
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

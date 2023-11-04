@@ -57,6 +57,19 @@ const setTimer = () => {
   min-width: 160px;
   text-align: center;
   color: #fff;
+  display: inline-block;
+  transition: all 0.2s;
+}
+.dd-message[animation="true"] {
+  animation: upDown 0.1s linear;
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .dd-message[type="success"] {
   background-color: var(--dd-success-base);
