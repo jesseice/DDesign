@@ -18,10 +18,10 @@
         :disabled="disabled"
         :readonly="readonly"
         @change="change"
-        @input="input"
         @focus="focus"
         @blur="blur"
         @keydown="keydown"
+        @input="input"
       />
       <div class="dd-input-suffix">
         <slot name="suffix">{{ suffix }}</slot>

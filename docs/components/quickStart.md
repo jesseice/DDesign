@@ -2,11 +2,29 @@
 
 ## 安装
 
+:::: code-group
+::: code-group-item NPM
+
 ```shell
 npm i ddesign-vue-next
+```
+
+:::
+::: code-group-item PNPM
+
+```shell
 pnpm add ddesign-vue-next
+```
+
+:::
+::: code-group-item YARM
+
+```shell
 yarn add ddesign-vue-next
 ```
+
+:::
+::::
 
 ## 使用
 

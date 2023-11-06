@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, reactive, ref } from "vue";
+import { onMounted, ref } from "vue";
 import { MessagePlugin } from "../../../src";
 const props = defineProps({
   codeStr: {
@@ -55,7 +55,6 @@ onMounted(() => {
 const showCode = () => {
   isShow.value = !isShow.value;
   if (isShow.value === true) {
-    console.log("[codeHeight.value] ---> ", codeHeight.value);
     codeContent.value.style.height = codeHeight.value + 25 + "px";
   } else {
     codeContent.value.style.height = 0;
@@ -77,7 +76,7 @@ const copy = () => {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .theme-container.sidebar-open .sidebar {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border: 0;
@@ -106,18 +105,14 @@ const copy = () => {
       transform: translateX(-40px);
       opacity: 1;
     }
-
-    .lock-code .icon-down {
-      transform: translateX(-40px);
-    }
-
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
       0 2px 4px 0 rgba(232, 237, 250, 0.5);
   }
 
   .code-content {
     position: relative;
-    background-color: #fafafa;
+    // background-color: #fafafa;
+    background-color: #282c34;
     border-top: 1px solid #eaeefb;
     overflow: hidden;
     transition: height 0.2s;
@@ -169,10 +164,6 @@ const copy = () => {
 
       .lock-code-word {
         color: #409eff;
-      }
-
-      .icon-down {
-        fill: #409eff;
       }
     }
 

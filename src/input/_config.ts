@@ -1,3 +1,4 @@
+import { InputType } from "../utils/contant";
 export const _props = {
   value: {
     type: String,
@@ -10,8 +11,7 @@ export const _props = {
   type: {
     type: String,
     default: "text",
-    validator: (val: string) =>
-      ["text", "password", "number", "email", "select"].includes(val),
+    validator: (val: string) => InputType.includes(val),
   },
   tips: {
     type: String,

@@ -19,7 +19,7 @@ export default defineUserConfig({
         activeMatch: "components",
       },
       {
-        text: "Github",
+        text: "GitHub",
         link: "https://github.com/jesseice/DDesign",
         target: "_blank",
       },
@@ -28,22 +28,22 @@ export default defineUserConfig({
       "/components": [
         {
           text: "开始",
-          children: [{ text: "快速开始", link: "/components/quickStart" }],
+          children: [{ text: "快速开始", link: "/components/quickStart.md" }],
         },
         {
           text: "布局",
-          children: [{ text: "间距", link: "/components/space" }],
+          children: [{ text: "间距", link: "/components/space.md" }],
         },
         {
           text: "元级组件",
           children: [
             {
               text: "按钮（button）",
-              link: "/components/button",
+              link: "/components/button.md",
             },
             {
               text: "图标（icon）",
-              link: "/components/icon",
+              link: "/components/icon.md",
             },
           ],
         },
@@ -52,11 +52,11 @@ export default defineUserConfig({
           children: [
             {
               text: "输入框（input）",
-              link: "/components/input",
+              link: "/components/input.md",
             },
             {
               text: "选择框（select）",
-              link: "/components/select",
+              link: "/components/select.md",
             },
           ],
         },
@@ -65,7 +65,7 @@ export default defineUserConfig({
           children: [
             {
               text: "标签（tag）",
-              link: "/components/tag",
+              link: "/components/tag.md",
             },
           ],
         },
@@ -74,11 +74,11 @@ export default defineUserConfig({
           children: [
             {
               text: "弹窗（modal）",
-              link: "/components/modal",
+              link: "/components/modal.md",
             },
             {
               text: "全局提示（message）",
-              link: "/components/message",
+              link: "/components/message.md",
             },
           ],
         },

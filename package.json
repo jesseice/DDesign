@@ -1,6 +1,6 @@
 {
   "name": "ddesign-vue-next",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "",
   "main": "index.js",
   "homepage": "https://jesseice.github.io/DDesign/",
@@ -10,8 +10,8 @@
     "vp": "vuepress dev docs",
     "vpb": "vuepress build docs",
     "build:lib": "vite build",
-    "push:io": "./script/publicDocs.sh",
-    "push:npm": "./script/npmPublic.sh"
+    "push:io": "cd script && publicDocs.sh",
+    "push:npm": "cd script && npmPublic.sh"
   },
   "typings": "dist/index.d.ts",
   "module": "dist/index.mjs",
