@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-df550e82","path":"/components/tag.html","title":"Tag 标签","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"基本用法","slug":"基本用法","link":"#基本用法","children":[]},{"level":2,"title":"API","slug":"api","link":"#api","children":[]}],"git":{"updatedTime":1699263697000},"filePathRelative":"components/tag.md"}');export{e as data};

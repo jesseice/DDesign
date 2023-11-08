@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-46f49a46","path":"/template.html","title":"","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"基本用法","slug":"基本用法","link":"#基本用法","children":[]},{"level":2,"title":"API","slug":"api","link":"#api","children":[]}],"git":{"updatedTime":1699082921000},"filePathRelative":"template.md"}');export{e as data};

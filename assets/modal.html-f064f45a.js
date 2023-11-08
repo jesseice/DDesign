@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-d8713ce8","path":"/components/modal.html","title":"Modal 弹窗","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"基础用法","slug":"基础用法","link":"#基础用法","children":[]},{"level":2,"title":"API","slug":"api","link":"#api","children":[]}],"git":{"updatedTime":1699263697000},"filePathRelative":"components/modal.md"}');export{e as data};

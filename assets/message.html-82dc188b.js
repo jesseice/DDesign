@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-1982571c","path":"/components/message.html","title":"Message 全局提示","lang":"zh-CN","frontmatter":{},"headers":[{"level":2,"title":"基本使用","slug":"基本使用","link":"#基本使用","children":[]},{"level":2,"title":"API","slug":"api","link":"#api","children":[]}],"git":{"updatedTime":1699263697000},"filePathRelative":"components/message.md"}');export{e as data};
