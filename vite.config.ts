@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import vuePlugin from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
@@ -38,6 +39,9 @@ export default defineConfig(({}) => {
       lib: {
         entry,
       },
+    },
+    test: {
+      // ...
     },
   };
 });
